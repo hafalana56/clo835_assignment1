@@ -16,7 +16,8 @@ resource "aws_ecr_repository" "webapp-ecr" {
 
 resource "aws_ecr_repository" "database-ecr" {
   name = "database-ecr"
-}s
+}
+
 resource "aws_instance" "webapp_instance" {
   ami                  = data.aws_ami.latest_amazon_linux.id
   instance_type        = "t2.micro"
