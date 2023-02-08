@@ -1,3 +1,12 @@
+
+
+#----------------------------------------------------------
+# ACS730 - Week 3 - Terraform Introduction
+#
+# Build EC2 Instances
+#
+#----------------------------------------------------------
+
 #  Define the provider
 provider "aws" {
   region = "us-east-1"
