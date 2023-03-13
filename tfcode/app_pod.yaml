@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: webapp
+  labels:
+    role: webapp
+spec:
+  containers:
+  - name: webapp
+    image: 835867664638.dkr.ecr.us-east-1.amazonaws.com/webapp-ecr:latest
+    ports:
+    - containerPort: 8080
+    env:
+    - name: DBUSER
+      value: "root"
+    - name: DBPWD
+      value: "pw"
+    - name: DBPORT
+      value: "3306"
+    - name: DBHOST
+      value: "54.208.54.50"
+    - name: APP_COLOR
+      value: "blue"
+  imagePullSecrets:
+  - name: regcred
